@@ -65,8 +65,11 @@ def main():
             except TypeError:
                 raise TypeError('Error: invalid input, must be a Exercise number')
 
-            if 2 > selected or selected > 9:
-                raise Exception("The number must be between 2 and 9")
+            first_exercise = 2
+            last_exercise = 9
+
+            if first_exercise > selected or selected > last_exercise:
+                raise Exception(f"The number must be between {first_exercise} and {last_exercise}")
 
             my_case = Exercise_case()
 
